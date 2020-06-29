@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+#container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+.door{
+    position: absolute;
+    bottom: 0;
+    width: 10%;
+    padding-bottom: 16%;
+    animation: createDoor 10s forwards ease-in;
+}
+
+
+
+@keyframes createDoor {
+    0%  {width: 0;
+        bottom: 16%;
+        padding-bottom: 0%;
+        margin-left: 50%;
+    }
+
+    40%{
+        bottom: 0%;
+    }
+
+    90% {width: 100%;
+        bottom: 0%;
+        padding-bottom: 160%;
+        margin: 0%;
+    }
+
+    100% {width: 100%;
+        bottom: 0%;
+        padding-bottom: 160%;
+        margin: 0%;
+    }
+  }
