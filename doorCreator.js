@@ -2,11 +2,14 @@
 
 
 document.addEventListener('keydown', createDoor);
+
+
+document.addEventListener('click', createDoor);
+document.addEventListener('touchstart', createDoor);
+
 const doorContainer = document.getElementById('container');
 
 function createDoor(e) {
-    console.log(e.code)
-    if(`${e.code}` === 'Space'){
         let nextDoor = document.createElement('div');
         nextDoor.classList.add('door');
 
@@ -17,7 +20,6 @@ function createDoor(e) {
         lastDoor && nextDoor.addEventListener('animationend', () => {
             lastDoor.remove();
         })
-    }
 }
 
 function randomColor () {
